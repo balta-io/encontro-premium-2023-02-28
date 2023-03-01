@@ -1,0 +1,9 @@
+@page "/"
+@model Index
+
+<h1>Bem vindo!</h1>
+
+@foreach (var item in Model.Categories)
+{
+    <p>@item.Id - @item.Title</p>
+}

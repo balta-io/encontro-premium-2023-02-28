@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>@ViewData["Title"] - Razor App</title>
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/MyRazorApp01.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<h2>@DateTime.Now</h2>
+<partial name="Partials/NavBar"/>
+@RenderBody()
+</body>
+</html>

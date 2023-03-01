@@ -1,0 +1,25 @@
+@page "~/products/{skip?}/{take?}"
+@using System.Globalization
+@model MyRazorApp01.Pages.Backoffice.ProductsPage
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Produto</td>
+        <td>Preço</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model.Products)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Title</td>
+            <td>@product.Price.ToString("C", new CultureInfo("pt-BR"))</td>
+        </tr>
+    }
+    </tbody>
+</table>
